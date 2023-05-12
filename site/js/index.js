@@ -57,8 +57,13 @@ async function balanceClick() {
             return showError();
         }
     }
-
-    let r = await fetch(`/api/balance?q=${encodeURIComponent(input.value)}`).then((x) => x.json());
+    let r;
+    try {
+        r = await fetch(`/api/balance?q=${encodeURIComponent(input.value)}`).then((x) => x.json());
+    } catch (err) {
+        console.error(err);
+        showError('An unexpected error occurred.');
+    }
     input.disabled = false;
     if (typeof r === 'string') {
         res.value = r;
