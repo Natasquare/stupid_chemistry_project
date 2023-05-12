@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <meta name="description" content="Balance your chemical equations (and chemistry grades) here." />
+        <meta name="keywords" content="chemistry,balance,chemical,chemco" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#78aad8" />
+        <meta property="og:site_name" content="ChemCo" />
+        <title>ChemCo</title>
+        <link rel="icon" href="logo.png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/main.min.css" />
+    </head>
+    <body>
+        <div class="nav"><span class="logo">ChemCo</span></div>
+        <div class="outer" id="out">
+            <div class="bcontainer">
+                <i class="fas fa-history"></i>
+                <i class="fas fa-arrow-alt-circle-right"></i>
+                <i class="fas fa-arrow-alt-circle-left"></i>
+            </div>
+            <div class="container">
+                <h2>Input</h2>
+                <div class="in">
+                    <input type="text" placeholder="H2 + O2 -> H2O" required spellcheck="false" class="search" id="i" />
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <p class="info">Separate reactants and products with "->".</p>
+            </div>
+            <div class="container">
+                <h2>Balanced</h2>
+                <div class="in">
+                    <input type="text" placeholder="2H2 + O2 -> 2H2O" spellcheck="false" class="search" id="o"/>
+                    <i class="fas fa-copy"></i>
+                </div>
+                <p class="error o">AMUNGUS</p>
+            </div>
+        </div>
+        <div class="container history" style="display:none" id="h">
+                <h1>History</h1>
+                <div>
+                        <input type="text" placeholder="Search through your queries..." required spellcheck="false" class="search" id="s" />
+                <table id="ht"></table>
+                </div>
+            </div>
+        </div>
+        <script src="js/index.min.js"></script>
+    </body>
+</html>
